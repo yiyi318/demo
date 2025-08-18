@@ -1,0 +1,46 @@
+<!-- res/layout/toolbar_common.xml -->
+<com.google.android.material.appbar.MaterialToolbar
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/toolbar"
+android:layout_width="match_parent"
+android:layout_height="?attr/actionBarSize"
+android:background="?attr/colorPrimary"
+app:contentInsetStart="0dp"
+app:contentInsetStartWithNavigation="0dp"
+android:layoutDirection="ltr">
+
+<TextView
+    android:id="@+id/toolbar_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:textSize="16sp"
+    android:gravity="center"
+    android:textColor="?android:attr/colorForeground"
+/>
+
+<!-- 二维码 -->
+<ImageButton
+    android:id="@+id/qr_code_button"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_gravity="start"
+    android:layout_marginLeft="8dp"
+    android:background="@android:color/transparent"
+    app:actionViewClass="androidx.appcompat.widget.ActionView.ActionButton"
+    app:showAsAction="ifRoom" />
+
+<ImageButton
+    android:id="@+id/btnSave"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:layout_marginRight="8dp"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:padding="8dp"
+    android:contentDescription="保存" />
+
+
+<!-- 搜索按钮（保留，可在使用时隐藏） -->
+</com.google.android.material.appbar.MaterialToolbar>

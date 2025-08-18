@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toolbar_dark">#303030</color>
+    <color name="statusbar_dark">#202020</color>
+    <color name="nav_icon_dark">#FFFFFFFF</color>
+
+    <color name="blue">#FF000000</color>
+
+</resources>

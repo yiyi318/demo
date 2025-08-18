@@ -1,0 +1,72 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <!-- 顶部工具栏 -->
+    <include
+        android:id="@+id/sharetoolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+
+        />
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="16dp">
+
+        <!-- 文章标题 -->
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="文章标题（100字以内）"
+            android:maxLength="100"/>
+
+        <!-- 文章链接 -->
+        <EditText
+            android:id="@+id/etLink"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="文章链接"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:gravity="top"
+            android:layout_marginTop="16dp"/>
+
+        <!-- 分享按钮 -->
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="分享"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:enabled="false"/>
+
+        <!-- 进度条 -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+        <!-- 温馨提示（与截图一致） -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="温馨提示\n1. 只要是任何好文都可以分享哈...（省略原文）"
+            android:layout_marginTop="24dp"
+            android:textColor="#666"/>
+    </LinearLayout>
+
+</FrameLayout>

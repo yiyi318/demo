@@ -1,0 +1,185 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:id="@+id/fragmentprofile"
+    android:fillViewport="true">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 顶部1dp分割线 -->
+        <View
+            android:id="@+id/divider_top"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- 紫色用户信息区 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="?attr/colorPrimary"
+            android:paddingTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/divider_top">
+
+            <!-- 奖杯图标 -->
+            <ImageView
+                android:id="@+id/iv_rank"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:layout_marginRight="16dp"
+                android:focusable="true"
+                android:src="@drawable/ic_trophy"
+                app:layout_constraintBottom_toTopOf="@id/iv_avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <!-- 头像 -->
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="20dp"
+                android:src="@drawable/ic_profile_1"
+                android:background="@drawable/white_circle_border"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <!-- 用户名 -->
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="点击头像登陆"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="@id/iv_avatar"
+                app:layout_constraintRight_toRightOf="@id/iv_avatar"
+                app:layout_constraintTop_toBottomOf="@id/iv_avatar"/>
+
+            <!-- 等级和排名 -->
+            <LinearLayout
+                android:id="@+id/level_rank_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="@id/tvUsername"
+                app:layout_constraintRight_toRightOf="@id/tvUsername"
+                app:layout_constraintTop_toBottomOf="@id/tvUsername">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="等级："
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="排名："
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="--"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- 白色功能列表区 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/user_info_container">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <!-- 我的积分 -->
+            <include layout="@layout/item_profile_function"
+                android:id="@+id/item_points"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <!-- 我的收藏 -->
+            <include layout="@layout/item_shoucang_function"
+                android:id="@+id/item_favorites"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <!-- 我的分享 -->
+            <include layout="@layout/item_share_function"
+                android:id="@+id/item_share"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <!-- 历史记录 -->
+            <include layout="@layout/item_history_function"
+                android:id="@+id/item_history"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <!-- 系统设置 -->
+            <include layout="@layout/item_setting_function"
+                android:id="@+id/item_settings"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <include layout="@layout/item_back_function"
+                android:id="@+id/item_back"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

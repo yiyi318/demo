@@ -1,0 +1,105 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+}
+
+android {
+    namespace 'com.example.myapplication'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdk 31
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables {
+            useSupportLibrary true  // 启用 SVG 支持
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+        compose true
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+//    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.lifecycle.runtime.ktx
+    implementation libs.activity.compose
+    implementation platform(libs.compose.bom)
+    implementation libs.ui
+    implementation libs.ui.graphics
+    implementation libs.ui.tooling.preview
+    implementation libs.material3
+    implementation libs.activity
+    // Room 核心库
+    implementation "androidx.room:room-runtime:2.5.2"
+    // 注解处理器（Kotlin 用 kapt，Java 用 annotationProcessor）
+    annotationProcessor "androidx.room:room-compiler:2.5.2" // 替换 kapt 为 annotationProcessor
+//    // 可选：Room 与 Lifecycle 集成（方便观察数据库数据）
+//    implementation "androidx.room:room-ktx:2.5.2"
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
+    // 或降级到旧版（如2.2.2）
+    implementation 'androidx.webkit:webkit:1.8.0'
+    annotationProcessor 'com.google.dagger:hilt-android-compiler:2.48'
+    implementation 'com.google.code.gson:gson:2.10.1' // 最低要求 2.8.6
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0' // 如果使用注解
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // JSON转换
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+    // 使用最新版（完全兼容 AndroidX）
+    implementation 'io.github.scwang90:refresh-layout-kernel:2.1.0'
+    implementation 'io.github.scwang90:refresh-header-classics:2.1.0'
+    implementation 'io.github.scwang90:refresh-footer-classics:2.1.0'
+    implementation 'com.google.zxing:core:3.5.1'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    implementation 'com.jakewharton:process-phoenix:2.1.2'
+    // 简化扫码流程的库
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    // 图片加载库（用于相册选择）
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0' // 微信 SDK
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+//    implementation files('libs/mta-sdk-4.4.0.jar') // QQ SDK（需手动下载）
+
+
+
+
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    androidTestImplementation platform(libs.compose.bom)
+    androidTestImplementation libs.ui.test.junit4
+    debugImplementation libs.ui.tooling
+    debugImplementation libs.ui.test.manifest
+
+}

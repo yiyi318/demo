@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme.NoTitle" parent="Theme.Material3.DayNight.NoActionBar" tools:ignore="DuplicateDefinition">
+        <item name="android:windowNoTitle">true</item> <!-- 完全移除窗口标题 -->
+        <item name="android:windowSplashScreenBackground">@color/splash_background</item>
+
+        <!-- 配置启动画面图标 (可使用矢量图或动画矢量图) -->
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+
+<!--        &lt;!&ndash; 配置图标背景 (可选) &ndash;&gt;-->
+<!--        <item name="android:windowSplashScreenIconBackground">-->
+<!--            @color/splash_icon_background-->
+<!--        </item>-->
+
+        <!-- 配置启动画面动画持续时间 (毫秒) -->
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
+
+        <!-- 配置主窗口背景 (启动画面退出后显示) -->
+        <item name="postSplashScreenTheme">@style/AppTheme.NoTitle</item>
+    </style>
+
+
+
+
+</resources>

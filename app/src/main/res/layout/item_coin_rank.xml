@@ -1,0 +1,75 @@
+<!-- item_coin_rank.xml -->
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeColor="@color/gray"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_coin_rank"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvRank"
+            android:layout_width="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_height="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <TextView
+            android:id="@+id/tv_Username"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+             android:layout_height="24dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@id/tvRank"
+            app:layout_constraintEnd_toStartOf="@id/Level"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <TextView
+            android:id="@+id/Level"
+            android:layout_width="60dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Level="
+            android:layout_height="24dp"
+            app:layout_constraintEnd_toStartOf="@id/tvLevel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvLevel"
+            android:layout_width="60dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+             android:layout_height="24dp"
+
+            app:layout_constraintEnd_toStartOf="@id/tvCoinCount"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCoinCount"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:layout_height="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

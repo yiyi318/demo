@@ -1,0 +1,22 @@
+<!-- 标准搜索框样式 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 填充色（浅灰色背景） -->
+    <solid android:color="?attr/colorPrimary"/>
+
+    <!-- 圆角（推荐4-8dp圆角） -->
+    <corners android:radius="20dp"/>
+
+    <!-- 边框（1dp灰色细线） -->
+    <stroke
+        android:width="1dp"
+        android:color="@color/color_primary_dark"/>
+
+    <!-- 内边距（避免文字贴边） -->
+    <!-- 关键：增加内边距 -->
+    <padding
+        android:top="8dp"
+        android:left="2dp"
+        android:bottom="8dp"/>
+</shape>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profileFragment">
+
+    <!-- 主Fragment (Profile) -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.myapplication.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+
+        <!-- 定义所有跳转Action -->
+        <action
+            android:id="@+id/action_to_coinFragment"
+            app:destination="@id/coinFragment" />
+
+        <action
+            android:id="@+id/action_to_collectFragment"
+            app:destination="@id/collectFragment" />
+
+        <action
+            android:id="@+id/action_to_shareFragment"
+            app:destination="@id/shareFragment" />
+
+        <action
+            android:id="@+id/action_to_historyFragment"
+            app:destination="@id/historyFragment" />
+
+        <action
+            android:id="@+id/action_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <!-- 所有目标Fragment必须明确定义 -->
+    <fragment
+        android:id="@+id/coinFragment"
+        android:name="com.example.myapplication.ui.profile.CoinFragment"
+        android:label="Coin"
+        tools:layout="@layout/fragment_coin"/>
+
+    <fragment
+        android:id="@+id/collectFragment"
+        android:name="com.example.myapplication.ui.profile.CollectFragment"
+        android:label="Collect"
+        tools:layout="@layout/fragment_collect"/>
+
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="com.example.myapplication.ui.profile.ShareFragment"
+        android:label="Share"
+        tools:layout="@layout/fragment_share"/>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.myapplication.ui.profile.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history"/>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.myapplication.ui.profile.SettingFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_setting"/>
+</navigation>

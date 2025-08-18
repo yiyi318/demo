@@ -1,0 +1,20 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_test"
+    app:startDestination="@id/mainFragment"> <!-- 现在app前缀已生效 -->
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.myapplication.profile.MainFragment"
+        android:label="Main">
+        <action
+            android:id="@+id/action_to_detail"
+            app:destination="@id/detailFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.myapplication.profile.DetailFragment"
+        android:label="Detail"/>
+</navigation>

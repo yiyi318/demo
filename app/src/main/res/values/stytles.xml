@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Search" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@color/white</item> <!-- 设置纯色背景 -->
+
+
+    </style>
+
+    <!-- res/values/themes.xml -->
+    <style name="Theme.App.Dark.WebView" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:forceDarkAllowed">false</item> <!-- 禁用系统级强制黑暗模式 -->
+        <item name="android:windowLightNavigationBar">true</item> <!-- 固定导航栏样式 -->
+    </style>
+
+
+    <!-- res/values/styles.xml -->
+    <style name="NavCategoryItem" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+
+    <style name="SelectedCategoryItem" parent="NavCategoryItem">
+        <item name="cardBackgroundColor">@color/Primary</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path
+        android:pathData="M0,0h24v24H0z"/>
+
+    <!-- 四角标记 - 左上 -->
+    <path
+        android:pathData="M0,1h6M0.5,1v6"
+        android:strokeColor="@color/white"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="square"/>
+
+    <!-- 四角标记 - 右上 -->
+    <path
+        android:pathData="M24,1h-6M23.5,1v6"
+        android:strokeColor="@color/white"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="square"/>
+
+    <!-- 四角标记 - 左下 -->
+    <path
+        android:pathData="M0,23.5h6M0.5,23.5v-6"
+        android:strokeColor="@color/white"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="square"/>
+
+    <!-- 四角标记 - 右下 -->
+    <path
+        android:pathData="M23.5,23.5h-6M23.5,23.6v-6"
+        android:strokeColor="@color/white"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="square"/>
+
+    <!-- 扫描线（将被动画控制） -->
+    <path
+        android:name="scan_line"
+        android:pathData="M0,12h24"
+        android:strokeColor="@color/white"
+        android:strokeWidth="1"/>
+
+
+</vector>

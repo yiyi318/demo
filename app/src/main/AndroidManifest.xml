@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ExtraText">
+<!--    忽视检查文件中额外的文本，比如空格之类的，可以删除，不影响实际工作-->
+
+<!--    硬件申明-->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+<!--允许应用检查网络连接状态和应用需要使用互联网权限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 基础摄像头权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- 存储权限（Android 10-13）可以读取所有文件 -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+
+    <!-- 完整图片访问（Android 13）只可以读取图片文件 -->
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES"
+        android:minSdkVersion="33"
+        android:maxSdkVersion="33"/> <!-- 仅限Android 13 -->
+
+    <!-- 精选图片访问（Android 14+） 适用于android 14+以上 -->
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"
+        android:minSdkVersion="34"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:name=".MyApp"
+        android:theme="@style/Theme.YourAppName"
+    >
+
+<!--        网络service服务-->
+        <service android:name=".utils.service.NetworkMonitorService"
+                tools:ignore="MissingClass" />
+
+    <!-- 1. 搜索页面：非启动页，exported设为false -->
+    <activity
+        android:name=".ui.search.SearchActivity"
+        android:exported="false"
+        android:theme="@style/Theme.YourAppName" />
+
+
+    <!-- 2. 启动页：唯一启动入口（LAUNCHER），exported设为true 是启动页，noHistory启动后不保存在任务栈中 -->
+    <activity
+        android:name=".ui.splash.SplashActivity"
+        android:exported="true"
+        android:noHistory="true"
+        android:theme="@style/Theme.YourAppName">  <!-- 启动页专用主题 -->
+<!--        配置为应用的主入口-->
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+    <!-- 3. 主页面：非启动页，无LAUNCHER过滤器，exported设为false -->
+    <activity
+        android:name=".MainActivity"
+        android:exported="false"
+        android:theme="@style/Theme.YourAppName" />  <!-- 主页面主题 -->
+
+    <activity
+       android:name=".ui.WebView.WebViewActivity"
+       android:exported="false"
+       android:theme="@style/Theme.YourAppName"/>
+    <!--        摄像头activity-->
+    <activity
+        android:name=".utils.qrcode.CustomScannerActivity"
+        android:screenOrientation="portrait"
+        android:exported="false"
+        android:theme="@style/Theme.YourAppName" />
+    </application>
+
+</manifest>

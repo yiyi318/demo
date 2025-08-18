@@ -1,0 +1,16 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="LinearLayout"
+    tools:showIn="@layout/item_profile_function">
+
+    <!-- 仅覆盖需要修改的部分 -->
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:src="@drawable/ic_arrow_right"
+        android:tint="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:text="@string/my_coins"
+        android:textColor="@color/black"/>
+</merge>

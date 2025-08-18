@@ -1,0 +1,20 @@
+<!-- res/drawable/vector_logo.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- 定义路径组（可选） -->
+    <group
+        android:name="logo"
+        android:pivotX="100"
+        android:pivotY="100">
+
+        <!-- 定义图形路径 -->
+        <path
+            android:name="icon"
+            android:fillColor="#7FFFFF"
+            android:pathData="M100,30 L150,170 L50,170 Z" />
+    </group>
+</vector>

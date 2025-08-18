@@ -1,0 +1,26 @@
+<!-- res/anim/logo_animation.xml -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1500"
+    android:fillAfter="true">  <!-- 保持动画结束状态 -->
+
+    <!-- 第一阶段：淡入 + 放大（0ms ~ 750ms） -->
+    <set android:startOffset="0">
+        <alpha
+            android:fromAlpha="0.0"
+            android:toAlpha="1.0" />
+        <scale
+            android:fromXScale="0.8"
+            android:fromYScale="0.8"
+            android:toXScale="1.0"
+            android:toYScale="1.0"
+            android:pivotX="50%"
+            android:pivotY="50%" />
+    </set>
+
+    <!-- 第二阶段：淡出（750ms ~ 1500ms） -->
+    <set android:startOffset="1500">
+        <alpha
+            android:fromAlpha="1.0"
+            android:toAlpha="0.5" />
+    </set>
+</set>

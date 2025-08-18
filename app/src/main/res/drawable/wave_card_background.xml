@@ -1,0 +1,11 @@
+<!-- res/drawable/ic_card_dimpled.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="150dp"
+    android:viewportWidth="300"
+    android:viewportHeight="150">
+    <path
+        android:pathData="M0,20 Q0,0 20,0 L280,0 Q300,0 300,20 L300,130 Q300,150 280,150 L20,150 Q0,150 0,130 Z
+                         M50,75 Q100,40 150,75 Q200,110 250,75"
+        android:fillColor="@color/white"/>
+</vector>

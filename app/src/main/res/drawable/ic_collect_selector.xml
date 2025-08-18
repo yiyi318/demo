@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 已收藏状态（选中时） -->
+    <item android:drawable="@drawable/ic_collect_filled" android:state_selected="true" />
+    <!-- 未收藏状态（默认） -->
+    <item android:drawable="@drawable/ic_collect_outline" />
+</selector>

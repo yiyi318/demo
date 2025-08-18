@@ -1,0 +1,43 @@
+<!-- res/layout/fragment_collect.xml -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/item_coin_rank">
+
+    <include
+        android:id="@+id/mycointoolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/coin_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="56dp">
+
+        <!-- 加载中的进度条 -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!--         必须确保这个ID对应的是RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_coin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <include
+        android:id="@+id/bottom_tar"
+        layout="@layout/item_coin_rank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
+
+</FrameLayout>

@@ -1,0 +1,3 @@
+<ProgressBar android:progressDrawable="@drawable/progress_wave"
+    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

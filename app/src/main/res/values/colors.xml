@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- 次要文本颜色（浅灰色） -->
+    <color name="text_secondary">#888888</color>
+
+    <!-- 主要文本颜色（黑色） -->
+    <color name="text_primary">#333333</color>
+
+    <!-- 强调色（如蓝色） -->
+    <color name="color_accent">#007AFF</color>
+    <color name="color_primary_dark">#3367D6</color> <!-- 加深15% -->
+    <!-- 或 -->
+    <color name="splash_background">#FFFFFFFF</color>  <!-- 白色背景 -->
+    <color name="splash_icon_background">#007AFF</color>
+    <color name="red">#FF4081</color>       <!-- 已收藏爱心颜色 -->
+    <color name="gray">#9E9E9E</color>      <!-- 未收藏爱心轮廓颜色 -->
+    <color name="blue_primary">#4285F4</color>  <!-- 主蓝 -->
+    <color name="blue_dark">#3367D6</color>     <!-- 加深15% -->
+    <color name="blue_light">#E8F0FE</color>    <!-- 浅蓝背景 -->
+    <color name="gray_500">#3367D6</color>>
+    <color name="colorPrimary">#3F51B5</color>
+
+    <color name="gray_light">#EEEEEE</color>
+    <color name="Primary">#9370DB</color>
+
+    <color name="gold">#FFD700</color>
+    <color name="orange">#FFA500</color>
+    <color name="green">#32CD32</color>
+    <color name="blue">#9370DB</color>
+
+
+    <color name="primary_blue">#4285F4</color>
+    <color name="nav_icon_default">#757575</color>
+    <color name="nav_text_default">#212121</color>
+    <color name="nav_icon_selected">#4285F4</color>
+    <color name="nav_text_selected">#4285F4</color>
+
+    <color name="toolbar_light">#FF4081</color>
+    <color name="statusbar_light">#CC3366</color>
+    <color name="nav_icon_light">#FF000000</color>
+    <color name="tab_text_selected">#FF5722</color> <!-- 选中状态颜色 -->
+    <color name="tab_text_normal">#757575</color>
+    <color name="dark_background">#121212</color>  <!-- 未选中状态颜色 -->
+
+
+
+
+</resources>
