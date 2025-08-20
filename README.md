@@ -3,6 +3,6 @@ Android 12版本 直接运行就可
 ## 🎬 动画演示
 
 <p align="center">
-  <img src="asset/demo.gif" alt="动画演示" width="200">
+  <img src="asset/动画.gif" alt="动画演示" width="200">
 </p>
 
